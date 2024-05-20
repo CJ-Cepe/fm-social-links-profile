@@ -12,8 +12,13 @@
 
     --regular: 400;
     --bold: 600;
-    --bolder: 700
-}
+    --bolder: 700;
+    --lr-padding: clamp(1rem, 26.96629vw + -5.32022rem, 2.5rem);
+    --tb-padding: clamp(0.75rem, 22.47191vw + -4.51685rem, 2rem);
+    --fs-14: clamp(0.75rem, 2.24719vw + 0.22331rem, 0.875rem);
+    --fs-24: clamp(1.25rem, 4.49438vw + 0.19663rem, 1.5rem);
+    --img-width: clamp(5rem, 8.98876vw + 2.89326rem, 5.5rem)
+}   
 
 /* SIMPLE CSS RESET */
 *, *::before, *::after{
@@ -23,20 +28,20 @@
 * {
     margin: 0;
     padding: 0;
-  /*   line-height: 150%; */
+   line-height: 150%;
 }
 
 /* BODY */
 body {
     background-color: var(--Off-Black);
     height: 100vh;
-    padding: 32px;
+    padding: var(--tb-padding) var(--lr-padding);
 
     display: flex;
     flex-direction: column;
 
     font-family: "Inter", serif;
-    font-size: 14px;
+    font-size: var(--fs-14);
     font-weight: var(--regular);
     text-align: center;
     color: var(--White);
@@ -56,7 +61,9 @@ main {
     border-radius: 8px;
     max-width: 384px;
     width: 100%;
-    padding: 40px;
+    max-height: 100%;
+
+    padding: var(--lr-padding);
 
     display: flex;
     flex-direction: column;
@@ -65,7 +72,8 @@ main {
 }
 
 .card > img:first-child {
-    width: 88px;
+    width: var(--img-width);
+    max-width: 88px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
@@ -74,16 +82,15 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
 }
 
 .card > div:nth-child(2) > h1{
-    font-size: 24px;
+    font-size: var(--fs-24);
     font-weight: var(--bold);
 }
 
 .card > div:nth-child(2) > p{
-    font-size: 14px;
     color: var(--Green);
     font-weight: var(--bold);
 }
@@ -109,7 +116,7 @@ main {
 
 .card > ul a {
     width: 100%;
-    padding: 14px 0;
+    padding: 12px 0;
     background-color: var(--Grey);
     border-radius: 10px;
     text-decoration: none;

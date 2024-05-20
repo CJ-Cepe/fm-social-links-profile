@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+:root {
+    --Green: hsl(75, 94%, 57%);   
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark-Grey: hsl(0, 0%, 12%);
+    --Off-Black: hsl(0, 0%, 8%);
+}
+
+
+/* SIMPLE CSS RESET */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY */
+body {
+    background-color: var(--Dark-Grey);
+    height: 100vh;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.card {
+    background-color: var(--Grey);
+    border-radius: 20px;
+    max-width: 384px;
+    width: 100%;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.card > img:first-child {
+    width: 64px;
+    border-radius: 50%;
+}
+
+.card > ul {
+    list-style-type: none;
+}
+
+/* ATTRIBUTION */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

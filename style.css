@@ -9,8 +9,11 @@
     --Grey: hsl(0, 0%, 20%);
     --Dark-Grey: hsl(0, 0%, 12%);
     --Off-Black: hsl(0, 0%, 8%);
-}
 
+    --regular: 400;
+    --bold: 600;
+    --bolder: 700
+}
 
 /* SIMPLE CSS RESET */
 *, *::before, *::after{
@@ -20,16 +23,22 @@
 * {
     margin: 0;
     padding: 0;
+    line-height: 150%;
 }
 
 /* BODY */
 body {
-    background-color: var(--Dark-Grey);
+    background-color: var(--Off-Black);
     height: 100vh;
     padding: 1rem;
 
     display: flex;
     flex-direction: column;
+
+    font-family: "Inter", serif;
+    font-size: 14px;
+    font-weight: var(--regular);
+    color: var(--White);
 }
 
 main {
@@ -42,7 +51,7 @@ main {
 
 /* CARD */
 .card {
-    background-color: var(--Grey);
+    background-color: var(--Dark-Grey);
     border-radius: 20px;
     max-width: 384px;
     width: 100%;
@@ -50,7 +59,6 @@ main {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 24px;
 }
@@ -60,16 +68,63 @@ main {
     border-radius: 50%;
 }
 
+.card > p:nth-child(2) {
+
+}
+
+.card > p:nth-child(3) {
+    color: var(--Green);
+}
+
 .card > ul {
     list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    align-self: stretch;
+}
+
+.card > ul li {
+    border-radius: 10px;
+    display: flex;
+}
+
+.card > ul li {
+    display: flex;
+}
+
+.card > ul a {
+    background-color: rgb(66, 67, 67);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--White);
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.card > ul a:visited {
+
+}
+
+.card > ul a:hover, 
+.card > ul a:focus{
+    color: var(--Dark-Grey);
+    background-color: var(--Green);
+}
+
+.card > ul a:active {
+    background-color: var(--Grey);
 }
 
 /* ATTRIBUTION */
 .attribution { 
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: hsl(228, 45%, 44%);
 }

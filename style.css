@@ -23,14 +23,14 @@
 * {
     margin: 0;
     padding: 0;
-    line-height: 150%;
+  /*   line-height: 150%; */
 }
 
 /* BODY */
 body {
     background-color: var(--Off-Black);
     height: 100vh;
-    padding: 1rem;
+    padding: 32px;
 
     display: flex;
     flex-direction: column;
@@ -38,6 +38,7 @@ body {
     font-family: "Inter", serif;
     font-size: 14px;
     font-weight: var(--regular);
+    text-align: center;
     color: var(--White);
 }
 
@@ -52,10 +53,10 @@ main {
 /* CARD */
 .card {
     background-color: var(--Dark-Grey);
-    border-radius: 20px;
+    border-radius: 8px;
     max-width: 384px;
     width: 100%;
-    padding: 24px;
+    padding: 40px;
 
     display: flex;
     flex-direction: column;
@@ -82,6 +83,7 @@ main {
 }
 
 .card > div:nth-child(2) > p{
+    font-size: 14px;
     color: var(--Green);
     font-weight: var(--bold);
 }
@@ -91,7 +93,7 @@ main {
 
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
 
     align-self: stretch;
 }
@@ -107,7 +109,7 @@ main {
 
 .card > ul a {
     width: 100%;
-    padding: 12px 0;
+    padding: 14px 0;
     background-color: var(--Grey);
     border-radius: 10px;
     text-decoration: none;
@@ -125,7 +127,7 @@ main {
 
 .card > ul a:hover, 
 .card > ul a:focus{
-    color: var(--Dark-Grey);
+    color: var(--Grey);
     background-color: var(--Green);
 }
 

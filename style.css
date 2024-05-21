@@ -142,13 +142,3 @@ main {
     color: var(--Off-Black);
     transform: scale(0.95);
 }
-
-/* ATTRIBUTION */
-.attribution { 
-    font-size: 11px; 
-    text-align: center;
-}
-
-.attribution a { 
-    color: hsl(228, 45%, 44%);
-}

@@ -13,14 +13,6 @@
     --regular: 400;
     --bold: 600;
     --bolder: 700;
-
-
-    --lr-padding: clamp(1rem, 26.96629vw + -5.32022rem, 2.5rem);
-    --tb-padding: clamp(0.75rem, 22.47191vw + -4.51685rem, 2rem);
-    --fs-14: 14px; /* clamp(0.75rem, 2.24719vw + 0.22331rem, 0.875rem); */
-    --fs-24: 24px; /* clamp(1.25rem, 4.49438vw + 0.19663rem, 1.5rem); */
-    --img-width: 88px; /* clamp(5rem, 8.98876vw + 2.89326rem, 5.5rem); */
-    --padding: clamp(1rem, 24vw + -3.5rem, 2.5rem);
 }   
 
 /* SIMPLE CSS RESET */
@@ -65,7 +57,7 @@ main {
     max-width: 384px;
     width: 100%;
     max-height: 100%;
-    padding: var(--padding);
+    padding:  clamp(1rem, 24vw + -3.5rem, 2.5rem);
 
     display: flex;
     flex-direction: column;
@@ -74,8 +66,7 @@ main {
 }
 
 .card > img:first-child {
-    width: var(--img-width);
-    max-width: 88px;
+    width: 88px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
@@ -88,7 +79,7 @@ main {
 }
 
 .card > div:nth-child(2) > h1{
-    font-size: var(--fs-24);
+    font-size: 24px;
     font-weight: var(--bold);
 }
 
@@ -103,7 +94,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     align-self: stretch;
 }
 

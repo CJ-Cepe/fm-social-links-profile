@@ -75,7 +75,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
 }
 
 .card > div:nth-child(2) > h1{

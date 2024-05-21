@@ -13,11 +13,14 @@
     --regular: 400;
     --bold: 600;
     --bolder: 700;
+
+
     --lr-padding: clamp(1rem, 26.96629vw + -5.32022rem, 2.5rem);
     --tb-padding: clamp(0.75rem, 22.47191vw + -4.51685rem, 2rem);
-    --fs-14: clamp(0.75rem, 2.24719vw + 0.22331rem, 0.875rem);
-    --fs-24: clamp(1.25rem, 4.49438vw + 0.19663rem, 1.5rem);
-    --img-width: clamp(5rem, 8.98876vw + 2.89326rem, 5.5rem)
+    --fs-14: 14px; /* clamp(0.75rem, 2.24719vw + 0.22331rem, 0.875rem); */
+    --fs-24: 24px; /* clamp(1.25rem, 4.49438vw + 0.19663rem, 1.5rem); */
+    --img-width: 88px; /* clamp(5rem, 8.98876vw + 2.89326rem, 5.5rem); */
+    --padding: clamp(1rem, 24vw + -3.5rem, 2.5rem);
 }   
 
 /* SIMPLE CSS RESET */
@@ -28,27 +31,27 @@
 * {
     margin: 0;
     padding: 0;
-   line-height: 150%;
+    line-height: 150%;
 }
 
 /* BODY */
 body {
     background-color: var(--Off-Black);
-    height: 100vh;
-    padding: var(--tb-padding) var(--lr-padding);
-
-    display: flex;
-    flex-direction: column;
+    
+    min-height: 100vh;
 
     font-family: "Inter", serif;
-    font-size: var(--fs-14);
-    font-weight: var(--regular);
+    font-size: 14px;
+    font-weight: 400;
     text-align: center;
     color: var(--White);
+
+    display: flex;
 }
 
 main {
-    height: 100%;
+    flex-grow: 1;
+    padding: 16px;
 
     display: flex;
     justify-content: center;
@@ -58,12 +61,11 @@ main {
 /* CARD */
 .card {
     background-color: var(--Dark-Grey);
-    border-radius: 8px;
+    border-radius: 12px;
     max-width: 384px;
     width: 100%;
     max-height: 100%;
-
-    padding: var(--lr-padding);
+    padding: var(--padding);
 
     display: flex;
     flex-direction: column;
@@ -92,7 +94,7 @@ main {
 
 .card > div:nth-child(2) > p{
     color: var(--Green);
-    font-weight: var(--bold);
+    font-weight: var(--bolder);
 }
 
 .card > ul {
@@ -106,7 +108,6 @@ main {
 }
 
 .card > ul li {
-    border-radius: 10px;
     display: flex;
 }
 
@@ -115,16 +116,16 @@ main {
 }
 
 .card > ul a {
+    text-decoration: none;
+    background-color: var(--Grey);
+    border-radius: 8px;
     width: 100%;
     padding: 12px 0;
-    background-color: var(--Grey);
-    border-radius: 10px;
-    text-decoration: none;
-
+    
     color: var(--White);
-    font-weight: var(--bold);
+    font-weight: var(--bolder);
     text-align: center;
-    transition: transform 0.05s ease-in, 
+    transition: transform 0.05s ease-in,
         background-color 0.1s ease-in-out;
 }
 
